@@ -1,0 +1,45 @@
+<div class="row col s12">
+    <h3>Añadir/Modificar Usuario</h3>
+    <div class="row">
+        <input data-ng-model="user_id" type="hidden" value=" "/>  
+        <div class="input-field col s6">
+            <input data-ng-model="firstName" id="first_name" type="text" class="validate"/>
+            <label class="active" id="firstNameLabel" for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+            <input data-ng-model="lastName" id="" type="text" class="validate"/>
+            <label class="active">Last Name</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input data-ng-model="password" id="password" type="password" class="validate"/>
+            <label class="active" for="password">New Password</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input data-ng-model="username" id="username" type="text" class="validate" data-ng-readonly="updateUser"/>
+            <label class="active" for="username">Username</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input type="checkbox" data-ng-model="state" class="validate"/>
+            <label class="active" for="state" data-ng-click="state = !state">State</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <input type="checkbox" name="USER" class="validate" data-ng-model="USER.checked" />
+                <label class="active" for="USER" data-ng-click="USER.checked = !USER.checked">USER</label>
+        </div>
+        <div class="input-field col s6">
+            <input type="checkbox" name="ADMIN" class="validate" data-ng-model="ADMIN.checked" />
+                <label class="active" for="ADMIN" data-ng-click="ADMIN.checked = !ADMIN.checked">ADMIN</label>
+        </div>
+    </div>
+    <div class="row">
+        <a data-ng-click="saveOrUpdateUser()" class="waves-effect waves-light btn"><i class="material-icons right">note_add</i>Save Or Update User</a>
+    </div>
+</div>
